@@ -1,0 +1,5 @@
+C:\Users\James\documents\visual studio 2010\Projects\Trains\Trains\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\James\documents\visual studio 2010\Projects\Trains\Trains\bin\Debug\Trains.exe
+C:\Users\James\documents\visual studio 2010\Projects\Trains\Trains\bin\Debug\Trains.pdb
+C:\Users\James\documents\visual studio 2010\Projects\Trains\Trains\obj\x86\Debug\Trains.exe
+C:\Users\James\documents\visual studio 2010\Projects\Trains\Trains\obj\x86\Debug\Trains.pdb
