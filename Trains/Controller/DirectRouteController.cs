@@ -1,19 +1,29 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Trains.Model;
 
-namespace Trains.Controller
+namespace Trains
 {
-    public class DirectRouteController
+    /// <summary>  
+    /// ClassName:DirectRouteController  
+    /// Version:1.0  
+    /// Date:2016/05/17
+    /// Author:Dong Zhao  
+    /// </summary>  
+    /// <remarks>  
+    /// This class used to get distance of direct route.  
+    /// </remarks>  
+    public class DirectRouteController : IGetMatchRoutes
     {
         /// <summary>  
-        /// Public function used to count the distance of  route list.
+        /// Public function used to count the distance of route list.
         /// </summary>  
-        /// <param type="string" name="route">The route list need to count the distance.</param>
+        /// <param type="RouteModel" name="initialRoute">Initial RouteModel instance, contains conditions.</param>
+        /// <param type="int" name="condition">Condition value, should be 0 cause didn't use here.</param>
+        /// <param type="TownsModel" name="townRoutes">Initial TownsModel instance, contains RoutesGraphs and LimitRouteDepth</param>
         /// <returns type="int">Return the distance of the whole route.</returns>
-        public virtual int GetResult(RouteModel initialRoute, int condition, TownsModel townRoutes)
+        public int GetResult(RouteModel initialRoute, int condition, TownsModel townRoutes)
         {
             string route = initialRoute.Routes;
             int totalRoute = 0;
