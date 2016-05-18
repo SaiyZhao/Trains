@@ -1,10 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Trains.Model
+namespace Trains
 {
+    /// <summary>  
+    /// StructName:RouteModel  
+    /// Version:1.0  
+    /// Date:2016/05/17  
+    /// Author:Dong Zhao  
+    /// </summary>  
+    /// <remarks>  
+    /// This struct used to determine route structure.  
+    /// </remarks> 
     public struct RouteModel
     {
         private char _startTown;
