@@ -1,11 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Trains.Model
+namespace Trains
 {
+    /// <summary>  
+    /// ClassName:TownsModel  
+    /// Version:1.0  
+    /// Date:2016/05/17  
+    /// Author:Dong Zhao  
+    /// </summary>  
+    /// <remarks>  
+    /// This class used to determine the route graphs and the limit route depth of the route graphs.  
+    /// </remarks> 
     public class TownsModel
     {
         private Dictionary<char, Dictionary<char, int>> _routeGraphs;
@@ -29,6 +38,11 @@ namespace Trains.Model
             RouteGraphs = new Dictionary<char, Dictionary<char, int>>();
         }
 
+        /// <summary>  
+        /// Create route graphs function.
+        /// </summary>  
+        /// <param type="string" name="routeString"> Route list string need to serialize.</param> 
+        /// <returns type="bool">Return create result.</returns>
         public bool CreateRouteGraphs(string routeString)
         {
             bool createResult = true;
