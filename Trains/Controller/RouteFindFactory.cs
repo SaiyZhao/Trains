@@ -1,30 +1,30 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Trains.Model;
 
-namespace Trains.Controller
+namespace Trains
 {
+    /// <summary>  
+    /// ClassName:RouteFindFactory  
+    /// Version:1.0  
+    /// Date:2016/05/17  
+    /// Author:Dong Zhao  
+    /// </summary>  
+    /// <remarks>  
+    /// This class used to create the correct route route distance.  
+    /// </remarks> 
     public class RouteFindFactory
     {
-        //private static routefindfactory instance;
 
-        //private routefindfactory()
-        //{ }
-
-        //public static routefindfactory getinstance()
-        //{
-        //    if (instance == null)
-        //    {
-        //        instance = new routefindfactory();
-        //    }
-        //    return instance;
-        //}
-
-        public static DirectRouteController CreateRouteControl(FindRouteType type)
+        /// <summary>  
+        /// Public function used to create the correct find route distance.
+        /// </summary>  
+        /// <param type="FindRouteType" name="type">Find route type, used to determine the route instance.</param>
+        /// <returns type="IGetMatchRoutes">Return the correct find route distance.</returns>
+        public static IGetMatchRoutes CreateRouteControl(FindRouteType type)
         {
-            DirectRouteController routeControl = null;
+            IGetMatchRoutes routeControl = null;
             switch (type)
             {
                 case FindRouteType.DirectRoute:
@@ -37,7 +37,7 @@ namespace Trains.Controller
                     routeControl = new RouteWithExactlyStopsController();
                     break;
                 case FindRouteType.LengthOfShortestRoute:
-                    routeControl = new DirectRouteController();
+                    routeControl = new LengthOfShortestRouteController();
                     break;
                 case FindRouteType.NumberOfRoutesLimitDistance:
                     routeControl = new NumberOfRoutesLimitDistanceController();
